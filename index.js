@@ -590,8 +590,8 @@
 
     function add_css() {
     	var style = element("style");
-    	style.id = "svelte-m3ekzp-style";
-    	style.textContent = ".item.svelte-m3ekzp{cursor:default;height:2rem;line-height:2;padding:0.2rem 0.7rem;color:var(--color, inherit);text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.groupHeader.svelte-m3ekzp{text-transform:var(--groupTitleTextTransform, uppercase)}.groupItem.svelte-m3ekzp{padding-left:var(--groupItemPaddingLeft, 40px)}.item.svelte-m3ekzp:active{background:var(--itemActiveBackground, #b9daff)}.item.active.svelte-m3ekzp{background:var(--hove)}.item.first.svelte-m3ekzp{border-radius:var(--itemFirstBorderRadius, 4px 4px 0 0)}.item.hover.svelte-m3ekzp:not(.active){background:var(--itemHoverBG, #e7f2ff)}";
+    	style.id = "svelte-1ik3nfy-style";
+    	style.textContent = ".item.svelte-1ik3nfy{cursor:default;height:2rem;line-height:2;padding:0.2rem 0.7rem;color:var(--color, inherit);text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.groupHeader.svelte-1ik3nfy{text-transform:var(--groupTitleTextTransform, uppercase)}.groupItem.svelte-1ik3nfy{padding-left:var(--groupItemPaddingLeft, 40px)}.item.svelte-1ik3nfy:active{background:var(--hover)}.item.active.svelte-1ik3nfy{background:var(--hover)}.item.first.svelte-1ik3nfy{border-radius:var(--itemFirstBorderRadius, 4px 4px 0 0)}.item.hover.svelte-1ik3nfy:not(.active){background:var(--hover)}";
     	append(document.head, style);
     }
 
@@ -603,7 +603,7 @@
     	return {
     		c() {
     			div = element("div");
-    			attr(div, "class", div_class_value = "item " + /*itemClasses*/ ctx[3] + " svelte-m3ekzp");
+    			attr(div, "class", div_class_value = "item " + /*itemClasses*/ ctx[3] + " svelte-1ik3nfy");
     		},
     		m(target, anchor) {
     			insert(target, div, anchor);
@@ -611,7 +611,7 @@
     		},
     		p(ctx, [dirty]) {
     			if (dirty & /*getOptionLabel, item, filterText*/ 7 && raw_value !== (raw_value = /*getOptionLabel*/ ctx[0](/*item*/ ctx[1], /*filterText*/ ctx[2]) + "")) div.innerHTML = raw_value;
-    			if (dirty & /*itemClasses*/ 8 && div_class_value !== (div_class_value = "item " + /*itemClasses*/ ctx[3] + " svelte-m3ekzp")) {
+    			if (dirty & /*itemClasses*/ 8 && div_class_value !== (div_class_value = "item " + /*itemClasses*/ ctx[3] + " svelte-1ik3nfy")) {
     				attr(div, "class", div_class_value);
     			}
     		},
@@ -677,7 +677,7 @@
     class Item extends SvelteComponent {
     	constructor(options) {
     		super();
-    		if (!document.getElementById("svelte-m3ekzp-style")) add_css();
+    		if (!document.getElementById("svelte-1ik3nfy-style")) add_css();
 
     		init(this, options, instance, create_fragment, safe_not_equal, {
     			isActive: 4,

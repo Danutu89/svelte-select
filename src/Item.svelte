@@ -40,11 +40,11 @@
   }
 
   .item:active {
-    background: var(--itemActiveBackground, #b9daff);
+    background: var(--hover);
   }
 
   .item.active {
-    background: var(--hove);
+    background: var(--hover);
   }
 
   .item.first {
@@ -52,7 +52,7 @@
   }
 
   .item.hover:not(.active) {
-    background: var(--itemHoverBG, #e7f2ff);
+    background: var(--hover);
   }
 </style>
 
