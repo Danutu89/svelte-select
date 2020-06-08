@@ -22,10 +22,10 @@
 <style>
   .item {
     cursor: default;
-    height: var(--height, 42px);
-    line-height: var(--height, 42px);
-    padding: var(--itemPadding, 0 20px);
-    color: var(--itemColor, inherit);
+    height: 2rem;
+    line-height: 2;
+    padding: 0.2rem 0.7rem;
+    color: var(--color, inherit);
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -44,8 +44,7 @@
   }
 
   .item.active {
-    background: var(--itemIsActiveBG, #007aff);
-    color: var(--itemIsActiveColor, #fff);
+    background: var(--hove);
   }
 
   .item.first {

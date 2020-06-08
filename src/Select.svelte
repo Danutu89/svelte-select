@@ -615,16 +615,14 @@
 
 <style>
   .selectContainer {
-    --padding: 0 16px;
-
-    border: var(--border, 1px solid #d8dbdf);
-    border-radius: var(--borderRadius, 3px);
-    height: var(--height, 42px);
+    --padding: 0 0.5rem;
+    border-radius: 20px;
+    height: 2rem;
     position: relative;
     display: flex;
     align-items: center;
     padding: var(--padding);
-    background: var(--background, #fff);
+    background: var(--secondary-background);
   }
 
   .selectContainer input {
@@ -681,20 +679,20 @@
 
   .clearSelect {
     position: absolute;
-    right: var(--clearSelectRight, 10px);
-    top: var(--clearSelectTop, 11px);
-    bottom: var(--clearSelectBottom, 11px);
-    width: var(--clearSelectWidth, 20px);
-    color: var(--clearSelectColor, #c5cacf);
+    right: 0.3rem;
+    top: 0.3rem;
+    bottom: 0.3rem;
+    width: 1rem;
+    color: var(--color);
     flex: none !important;
   }
 
   .clearSelect:hover {
-    color: var(--clearSelectHoverColor, #2c3e50);
+    color: var(--theme-color);
   }
 
   .selectContainer.focused .clearSelect {
-    color: var(--clearSelectFocusColor, #3f4f5f);
+    color: var(--theme-color);
   }
 
   .indicator {

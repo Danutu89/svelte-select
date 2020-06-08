@@ -261,11 +261,10 @@
 
 <style>
   .listContainer {
-    box-shadow: var(--listShadow, 0 2px 3px 0 rgba(44, 62, 80, 0.24));
-    border-radius: var(--listBorderRadius, 4px);
+    border-radius: var(--border-radius);
     max-height: var(--listMaxHeight, 250px);
     overflow-y: auto;
-    background: var(--listBackground, #fff);
+    background: var(--background);
   }
 
   .virtualList {
