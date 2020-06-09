@@ -2362,11 +2362,11 @@
     	append(document_1.head, style);
     }
 
-    // (787:2) {#if Icon}
+    // (789:2) {#if Icon}
     function create_if_block_6(ctx) {
     	let switch_instance_anchor;
     	let current;
-    	var switch_value = /*Icon*/ ctx[16];
+    	var switch_value = /*Icon*/ ctx[17];
 
     	function switch_props(ctx) {
     		return {};
@@ -2390,7 +2390,7 @@
     			current = true;
     		},
     		p(ctx, dirty) {
-    			if (switch_value !== (switch_value = /*Icon*/ ctx[16])) {
+    			if (switch_value !== (switch_value = /*Icon*/ ctx[17])) {
     				if (switch_instance) {
     					group_outros();
     					const old_component = switch_instance;
@@ -2428,7 +2428,7 @@
     	};
     }
 
-    // (791:2) {#if isMulti && selectedValue && selectedValue.length > 0}
+    // (793:2) {#if isMulti && selectedValue && selectedValue.length > 0}
     function create_if_block_5(ctx) {
     	let switch_instance_anchor;
     	let current;
@@ -2438,8 +2438,8 @@
     		return {
     			props: {
     				selectedValue: /*selectedValue*/ ctx[3],
-    				getSelectionLabel: /*getSelectionLabel*/ ctx[12],
-    				activeSelectedValue: /*activeSelectedValue*/ ctx[20],
+    				getSelectionLabel: /*getSelectionLabel*/ ctx[13],
+    				activeSelectedValue: /*activeSelectedValue*/ ctx[21],
     				isDisabled: /*isDisabled*/ ctx[9]
     			}
     		};
@@ -2447,8 +2447,8 @@
 
     	if (switch_value) {
     		var switch_instance = new switch_value(switch_props(ctx));
-    		switch_instance.$on("multiItemClear", /*handleMultiItemClear*/ ctx[24]);
-    		switch_instance.$on("focus", /*handleFocus*/ ctx[27]);
+    		switch_instance.$on("multiItemClear", /*handleMultiItemClear*/ ctx[25]);
+    		switch_instance.$on("focus", /*handleFocus*/ ctx[28]);
     	}
 
     	return {
@@ -2467,8 +2467,8 @@
     		p(ctx, dirty) {
     			const switch_instance_changes = {};
     			if (dirty[0] & /*selectedValue*/ 8) switch_instance_changes.selectedValue = /*selectedValue*/ ctx[3];
-    			if (dirty[0] & /*getSelectionLabel*/ 4096) switch_instance_changes.getSelectionLabel = /*getSelectionLabel*/ ctx[12];
-    			if (dirty[0] & /*activeSelectedValue*/ 1048576) switch_instance_changes.activeSelectedValue = /*activeSelectedValue*/ ctx[20];
+    			if (dirty[0] & /*getSelectionLabel*/ 8192) switch_instance_changes.getSelectionLabel = /*getSelectionLabel*/ ctx[13];
+    			if (dirty[0] & /*activeSelectedValue*/ 2097152) switch_instance_changes.activeSelectedValue = /*activeSelectedValue*/ ctx[21];
     			if (dirty[0] & /*isDisabled*/ 512) switch_instance_changes.isDisabled = /*isDisabled*/ ctx[9];
 
     			if (switch_value !== (switch_value = /*MultiSelection*/ ctx[7])) {
@@ -2485,8 +2485,8 @@
 
     				if (switch_value) {
     					switch_instance = new switch_value(switch_props(ctx));
-    					switch_instance.$on("multiItemClear", /*handleMultiItemClear*/ ctx[24]);
-    					switch_instance.$on("focus", /*handleFocus*/ ctx[27]);
+    					switch_instance.$on("multiItemClear", /*handleMultiItemClear*/ ctx[25]);
+    					switch_instance.$on("focus", /*handleFocus*/ ctx[28]);
     					create_component(switch_instance.$$.fragment);
     					transition_in(switch_instance.$$.fragment, 1);
     					mount_component(switch_instance, switch_instance_anchor.parentNode, switch_instance_anchor);
@@ -2513,16 +2513,16 @@
     	};
     }
 
-    // (811:2) {:else}
+    // (813:2) {:else}
     function create_else_block$1(ctx) {
     	let input_1;
     	let mounted;
     	let dispose;
 
     	let input_1_levels = [
-    		/*_inputAttributes*/ ctx[21],
-    		{ placeholder: /*placeholderText*/ ctx[23] },
-    		{ style: /*inputStyles*/ ctx[14] }
+    		/*_inputAttributes*/ ctx[22],
+    		{ placeholder: /*placeholderText*/ ctx[24] },
+    		{ style: /*inputStyles*/ ctx[15] }
     	];
 
     	let input_1_data = {};
@@ -2539,13 +2539,13 @@
     		},
     		m(target, anchor) {
     			insert(target, input_1, anchor);
-    			/*input_1_binding_1*/ ctx[74](input_1);
+    			/*input_1_binding_1*/ ctx[75](input_1);
     			set_input_value(input_1, /*filterText*/ ctx[4]);
 
     			if (!mounted) {
     				dispose = [
-    					listen(input_1, "focus", /*handleFocus*/ ctx[27]),
-    					listen(input_1, "input", /*input_1_input_handler_1*/ ctx[75])
+    					listen(input_1, "focus", /*handleFocus*/ ctx[28]),
+    					listen(input_1, "input", /*input_1_input_handler_1*/ ctx[76])
     				];
 
     				mounted = true;
@@ -2553,9 +2553,9 @@
     		},
     		p(ctx, dirty) {
     			set_attributes(input_1, input_1_data = get_spread_update(input_1_levels, [
-    				dirty[0] & /*_inputAttributes*/ 2097152 && /*_inputAttributes*/ ctx[21],
-    				dirty[0] & /*placeholderText*/ 8388608 && { placeholder: /*placeholderText*/ ctx[23] },
-    				dirty[0] & /*inputStyles*/ 16384 && { style: /*inputStyles*/ ctx[14] }
+    				dirty[0] & /*_inputAttributes*/ 4194304 && /*_inputAttributes*/ ctx[22],
+    				dirty[0] & /*placeholderText*/ 16777216 && { placeholder: /*placeholderText*/ ctx[24] },
+    				dirty[0] & /*inputStyles*/ 32768 && { style: /*inputStyles*/ ctx[15] }
     			]));
 
     			if (dirty[0] & /*filterText*/ 16 && input_1.value !== /*filterText*/ ctx[4]) {
@@ -2566,23 +2566,23 @@
     		},
     		d(detaching) {
     			if (detaching) detach(input_1);
-    			/*input_1_binding_1*/ ctx[74](null);
+    			/*input_1_binding_1*/ ctx[75](null);
     			mounted = false;
     			run_all(dispose);
     		}
     	};
     }
 
-    // (802:2) {#if isDisabled}
+    // (804:2) {#if isDisabled}
     function create_if_block_4(ctx) {
     	let input_1;
     	let mounted;
     	let dispose;
 
     	let input_1_levels = [
-    		/*_inputAttributes*/ ctx[21],
-    		{ placeholder: /*placeholderText*/ ctx[23] },
-    		{ style: /*inputStyles*/ ctx[14] },
+    		/*_inputAttributes*/ ctx[22],
+    		{ placeholder: /*placeholderText*/ ctx[24] },
+    		{ style: /*inputStyles*/ ctx[15] },
     		{ disabled: true }
     	];
 
@@ -2600,13 +2600,13 @@
     		},
     		m(target, anchor) {
     			insert(target, input_1, anchor);
-    			/*input_1_binding*/ ctx[72](input_1);
+    			/*input_1_binding*/ ctx[73](input_1);
     			set_input_value(input_1, /*filterText*/ ctx[4]);
 
     			if (!mounted) {
     				dispose = [
-    					listen(input_1, "focus", /*handleFocus*/ ctx[27]),
-    					listen(input_1, "input", /*input_1_input_handler*/ ctx[73])
+    					listen(input_1, "focus", /*handleFocus*/ ctx[28]),
+    					listen(input_1, "input", /*input_1_input_handler*/ ctx[74])
     				];
 
     				mounted = true;
@@ -2614,9 +2614,9 @@
     		},
     		p(ctx, dirty) {
     			set_attributes(input_1, input_1_data = get_spread_update(input_1_levels, [
-    				dirty[0] & /*_inputAttributes*/ 2097152 && /*_inputAttributes*/ ctx[21],
-    				dirty[0] & /*placeholderText*/ 8388608 && { placeholder: /*placeholderText*/ ctx[23] },
-    				dirty[0] & /*inputStyles*/ 16384 && { style: /*inputStyles*/ ctx[14] },
+    				dirty[0] & /*_inputAttributes*/ 4194304 && /*_inputAttributes*/ ctx[22],
+    				dirty[0] & /*placeholderText*/ 16777216 && { placeholder: /*placeholderText*/ ctx[24] },
+    				dirty[0] & /*inputStyles*/ 32768 && { style: /*inputStyles*/ ctx[15] },
     				{ disabled: true }
     			]));
 
@@ -2628,14 +2628,14 @@
     		},
     		d(detaching) {
     			if (detaching) detach(input_1);
-    			/*input_1_binding*/ ctx[72](null);
+    			/*input_1_binding*/ ctx[73](null);
     			mounted = false;
     			run_all(dispose);
     		}
     	};
     }
 
-    // (821:2) {#if !isMulti && showSelectedItem}
+    // (823:2) {#if !isMulti && showSelectedItem}
     function create_if_block_3$1(ctx) {
     	let div;
     	let current;
@@ -2647,7 +2647,7 @@
     		return {
     			props: {
     				item: /*selectedValue*/ ctx[3],
-    				getSelectionLabel: /*getSelectionLabel*/ ctx[12]
+    				getSelectionLabel: /*getSelectionLabel*/ ctx[13]
     			}
     		};
     	}
@@ -2672,14 +2672,14 @@
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen(div, "focus", /*handleFocus*/ ctx[27]);
+    				dispose = listen(div, "focus", /*handleFocus*/ ctx[28]);
     				mounted = true;
     			}
     		},
     		p(ctx, dirty) {
     			const switch_instance_changes = {};
     			if (dirty[0] & /*selectedValue*/ 8) switch_instance_changes.item = /*selectedValue*/ ctx[3];
-    			if (dirty[0] & /*getSelectionLabel*/ 4096) switch_instance_changes.getSelectionLabel = /*getSelectionLabel*/ ctx[12];
+    			if (dirty[0] & /*getSelectionLabel*/ 8192) switch_instance_changes.getSelectionLabel = /*getSelectionLabel*/ ctx[13];
 
     			if (switch_value !== (switch_value = /*Selection*/ ctx[6])) {
     				if (switch_instance) {
@@ -2723,7 +2723,7 @@
     	};
     }
 
-    // (830:2) {#if showSelectedItem && isClearable && !isDisabled && !isWaiting}
+    // (832:2) {#if showSelectedItem && isClearable && !isDisabled && !isWaiting}
     function create_if_block_2$1(ctx) {
     	let div;
     	let mounted;
@@ -2742,7 +2742,7 @@
     			insert(target, div, anchor);
 
     			if (!mounted) {
-    				dispose = listen(div, "click", prevent_default(/*handleClear*/ ctx[19]));
+    				dispose = listen(div, "click", prevent_default(/*handleClear*/ ctx[20]));
     				mounted = true;
     			}
     		},
@@ -2755,7 +2755,7 @@
     	};
     }
 
-    // (846:2) {#if showChevron && !selectedValue || (!isSearchable && !isDisabled && !isWaiting && ((showSelectedItem && !isClearable) || !showSelectedItem))}
+    // (848:2) {#if showChevron && !selectedValue || (!isSearchable && !isDisabled && !isWaiting && ((showSelectedItem && !isClearable) || !showSelectedItem))}
     function create_if_block_1$1(ctx) {
     	let div;
 
@@ -2780,7 +2780,7 @@
     	};
     }
 
-    // (864:2) {#if isWaiting}
+    // (866:2) {#if isWaiting}
     function create_if_block$2(ctx) {
     	let div;
 
@@ -2811,7 +2811,7 @@
     	let current;
     	let mounted;
     	let dispose;
-    	let if_block0 = /*Icon*/ ctx[16] && create_if_block_6(ctx);
+    	let if_block0 = /*Icon*/ ctx[17] && create_if_block_6(ctx);
     	let if_block1 = /*isMulti*/ ctx[8] && /*selectedValue*/ ctx[3] && /*selectedValue*/ ctx[3].length > 0 && create_if_block_5(ctx);
 
     	function select_block_type(ctx, dirty) {
@@ -2821,9 +2821,9 @@
 
     	let current_block_type = select_block_type(ctx, [-1]);
     	let if_block2 = current_block_type(ctx);
-    	let if_block3 = !/*isMulti*/ ctx[8] && /*showSelectedItem*/ ctx[22] && create_if_block_3$1(ctx);
-    	let if_block4 = /*showSelectedItem*/ ctx[22] && /*isClearable*/ ctx[15] && !/*isDisabled*/ ctx[9] && !/*isWaiting*/ ctx[5] && create_if_block_2$1(ctx);
-    	let if_block5 = (/*showChevron*/ ctx[17] && !/*selectedValue*/ ctx[3] || !/*isSearchable*/ ctx[13] && !/*isDisabled*/ ctx[9] && !/*isWaiting*/ ctx[5] && (/*showSelectedItem*/ ctx[22] && !/*isClearable*/ ctx[15] || !/*showSelectedItem*/ ctx[22])) && create_if_block_1$1(ctx);
+    	let if_block3 = !/*isMulti*/ ctx[8] && /*showSelectedItem*/ ctx[23] && create_if_block_3$1(ctx);
+    	let if_block4 = /*showSelectedItem*/ ctx[23] && /*isClearable*/ ctx[16] && !/*isDisabled*/ ctx[9] && !/*isWaiting*/ ctx[5] && create_if_block_2$1(ctx);
+    	let if_block5 = (/*showChevron*/ ctx[18] && !/*selectedValue*/ ctx[3] || !/*isSearchable*/ ctx[14] && !/*isDisabled*/ ctx[9] && !/*isWaiting*/ ctx[5] && (/*showSelectedItem*/ ctx[23] && !/*isClearable*/ ctx[16] || !/*showSelectedItem*/ ctx[23])) && create_if_block_1$1(ctx);
     	let if_block6 = /*isWaiting*/ ctx[5] && create_if_block$2(ctx);
 
     	return {
@@ -2842,9 +2842,10 @@
     			if (if_block5) if_block5.c();
     			t5 = space();
     			if (if_block6) if_block6.c();
-    			attr(div, "class", div_class_value = "selectContainer " + /*containerClasses*/ ctx[18] + " svelte-7bommo");
-    			attr(div, "style", /*containerStyles*/ ctx[11]);
-    			toggle_class(div, "hasError", /*hasError*/ ctx[10]);
+    			attr(div, "class", div_class_value = "selectContainer " + /*containerClasses*/ ctx[19] + " svelte-7bommo");
+    			attr(div, "id", /*Id*/ ctx[10]);
+    			attr(div, "style", /*containerStyles*/ ctx[12]);
+    			toggle_class(div, "hasError", /*hasError*/ ctx[11]);
     			toggle_class(div, "multiSelect", /*isMulti*/ ctx[8]);
     			toggle_class(div, "disabled", /*isDisabled*/ ctx[9]);
     			toggle_class(div, "focused", /*isFocused*/ ctx[2]);
@@ -2864,26 +2865,26 @@
     			if (if_block5) if_block5.m(div, null);
     			append(div, t5);
     			if (if_block6) if_block6.m(div, null);
-    			/*div_binding*/ ctx[76](div);
+    			/*div_binding*/ ctx[77](div);
     			current = true;
 
     			if (!mounted) {
     				dispose = [
-    					listen(window, "click", /*handleWindowClick*/ ctx[28]),
-    					listen(window, "keydown", /*handleKeyDown*/ ctx[26]),
-    					listen(window, "resize", /*getPosition*/ ctx[25]),
-    					listen(div, "click", /*handleClick*/ ctx[29])
+    					listen(window, "click", /*handleWindowClick*/ ctx[29]),
+    					listen(window, "keydown", /*handleKeyDown*/ ctx[27]),
+    					listen(window, "resize", /*getPosition*/ ctx[26]),
+    					listen(div, "click", /*handleClick*/ ctx[30])
     				];
 
     				mounted = true;
     			}
     		},
     		p(ctx, dirty) {
-    			if (/*Icon*/ ctx[16]) {
+    			if (/*Icon*/ ctx[17]) {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
 
-    					if (dirty[0] & /*Icon*/ 65536) {
+    					if (dirty[0] & /*Icon*/ 131072) {
     						transition_in(if_block0, 1);
     					}
     				} else {
@@ -2937,11 +2938,11 @@
     				}
     			}
 
-    			if (!/*isMulti*/ ctx[8] && /*showSelectedItem*/ ctx[22]) {
+    			if (!/*isMulti*/ ctx[8] && /*showSelectedItem*/ ctx[23]) {
     				if (if_block3) {
     					if_block3.p(ctx, dirty);
 
-    					if (dirty[0] & /*isMulti, showSelectedItem*/ 4194560) {
+    					if (dirty[0] & /*isMulti, showSelectedItem*/ 8388864) {
     						transition_in(if_block3, 1);
     					}
     				} else {
@@ -2960,7 +2961,7 @@
     				check_outros();
     			}
 
-    			if (/*showSelectedItem*/ ctx[22] && /*isClearable*/ ctx[15] && !/*isDisabled*/ ctx[9] && !/*isWaiting*/ ctx[5]) {
+    			if (/*showSelectedItem*/ ctx[23] && /*isClearable*/ ctx[16] && !/*isDisabled*/ ctx[9] && !/*isWaiting*/ ctx[5]) {
     				if (if_block4) {
     					if_block4.p(ctx, dirty);
     				} else {
@@ -2973,7 +2974,7 @@
     				if_block4 = null;
     			}
 
-    			if (/*showChevron*/ ctx[17] && !/*selectedValue*/ ctx[3] || !/*isSearchable*/ ctx[13] && !/*isDisabled*/ ctx[9] && !/*isWaiting*/ ctx[5] && (/*showSelectedItem*/ ctx[22] && !/*isClearable*/ ctx[15] || !/*showSelectedItem*/ ctx[22])) {
+    			if (/*showChevron*/ ctx[18] && !/*selectedValue*/ ctx[3] || !/*isSearchable*/ ctx[14] && !/*isDisabled*/ ctx[9] && !/*isWaiting*/ ctx[5] && (/*showSelectedItem*/ ctx[23] && !/*isClearable*/ ctx[16] || !/*showSelectedItem*/ ctx[23])) {
     				if (if_block5) ; else {
     					if_block5 = create_if_block_1$1(ctx);
     					if_block5.c();
@@ -2995,27 +2996,31 @@
     				if_block6 = null;
     			}
 
-    			if (!current || dirty[0] & /*containerClasses*/ 262144 && div_class_value !== (div_class_value = "selectContainer " + /*containerClasses*/ ctx[18] + " svelte-7bommo")) {
+    			if (!current || dirty[0] & /*containerClasses*/ 524288 && div_class_value !== (div_class_value = "selectContainer " + /*containerClasses*/ ctx[19] + " svelte-7bommo")) {
     				attr(div, "class", div_class_value);
     			}
 
-    			if (!current || dirty[0] & /*containerStyles*/ 2048) {
-    				attr(div, "style", /*containerStyles*/ ctx[11]);
+    			if (!current || dirty[0] & /*Id*/ 1024) {
+    				attr(div, "id", /*Id*/ ctx[10]);
     			}
 
-    			if (dirty[0] & /*containerClasses, hasError*/ 263168) {
-    				toggle_class(div, "hasError", /*hasError*/ ctx[10]);
+    			if (!current || dirty[0] & /*containerStyles*/ 4096) {
+    				attr(div, "style", /*containerStyles*/ ctx[12]);
     			}
 
-    			if (dirty[0] & /*containerClasses, isMulti*/ 262400) {
+    			if (dirty[0] & /*containerClasses, hasError*/ 526336) {
+    				toggle_class(div, "hasError", /*hasError*/ ctx[11]);
+    			}
+
+    			if (dirty[0] & /*containerClasses, isMulti*/ 524544) {
     				toggle_class(div, "multiSelect", /*isMulti*/ ctx[8]);
     			}
 
-    			if (dirty[0] & /*containerClasses, isDisabled*/ 262656) {
+    			if (dirty[0] & /*containerClasses, isDisabled*/ 524800) {
     				toggle_class(div, "disabled", /*isDisabled*/ ctx[9]);
     			}
 
-    			if (dirty[0] & /*containerClasses, isFocused*/ 262148) {
+    			if (dirty[0] & /*containerClasses, isFocused*/ 524292) {
     				toggle_class(div, "focused", /*isFocused*/ ctx[2]);
     			}
     		},
@@ -3041,7 +3046,7 @@
     			if (if_block4) if_block4.d();
     			if (if_block5) if_block5.d();
     			if (if_block6) if_block6.d();
-    			/*div_binding*/ ctx[76](null);
+    			/*div_binding*/ ctx[77](null);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -3059,6 +3064,7 @@
     	let { isDisabled = false } = $$props;
     	let { isCreatable = false } = $$props;
     	let { isFocused = false } = $$props;
+    	let { Id = undefined } = $$props;
     	let { selectedValue = undefined } = $$props;
     	let { filterText = "" } = $$props;
     	let { placeholder = "Select..." } = $$props;
@@ -3134,10 +3140,10 @@
     		async () => {
     			getItemsHasInvoked = true;
     			$$invalidate(5, isWaiting = true);
-    			$$invalidate(30, items = await loadOptions(filterText));
+    			$$invalidate(31, items = await loadOptions(filterText));
     			$$invalidate(5, isWaiting = false);
     			$$invalidate(2, isFocused = true);
-    			$$invalidate(31, listOpen = true);
+    			$$invalidate(32, listOpen = true);
     		},
     		loadOptionsInterval
     	);
@@ -3172,16 +3178,16 @@
     		if (filterText !== prev_filterText) {
     			if (filterText.length > 0) {
     				$$invalidate(2, isFocused = true);
-    				$$invalidate(31, listOpen = true);
+    				$$invalidate(32, listOpen = true);
 
     				if (loadOptions) {
     					getItems();
     				} else {
     					loadList();
-    					$$invalidate(31, listOpen = true);
+    					$$invalidate(32, listOpen = true);
 
     					if (isMulti) {
-    						$$invalidate(20, activeSelectedValue = undefined);
+    						$$invalidate(21, activeSelectedValue = undefined);
     					}
     				}
     			} else {
@@ -3314,13 +3320,13 @@
     		switch (e.key) {
     			case "ArrowDown":
     				e.preventDefault();
-    				$$invalidate(31, listOpen = true);
-    				$$invalidate(20, activeSelectedValue = undefined);
+    				$$invalidate(32, listOpen = true);
+    				$$invalidate(21, activeSelectedValue = undefined);
     				break;
     			case "ArrowUp":
     				e.preventDefault();
-    				$$invalidate(31, listOpen = true);
-    				$$invalidate(20, activeSelectedValue = undefined);
+    				$$invalidate(32, listOpen = true);
+    				$$invalidate(21, activeSelectedValue = undefined);
     				break;
     			case "Tab":
     				if (!listOpen) $$invalidate(2, isFocused = false);
@@ -3334,7 +3340,7 @@
 
     					if (activeSelectedValue === 0 || activeSelectedValue === undefined) break;
 
-    					$$invalidate(20, activeSelectedValue = selectedValue.length > activeSelectedValue
+    					$$invalidate(21, activeSelectedValue = selectedValue.length > activeSelectedValue
     					? activeSelectedValue - 1
     					: undefined);
     				}
@@ -3343,18 +3349,18 @@
     				if (list) list.$set({ hoverItemIndex: -1 });
     				if (!isMulti || filterText.length > 0) return;
     				if (activeSelectedValue === undefined) {
-    					$$invalidate(20, activeSelectedValue = selectedValue.length - 1);
+    					$$invalidate(21, activeSelectedValue = selectedValue.length - 1);
     				} else if (selectedValue.length > activeSelectedValue && activeSelectedValue !== 0) {
-    					$$invalidate(20, activeSelectedValue -= 1);
+    					$$invalidate(21, activeSelectedValue -= 1);
     				}
     				break;
     			case "ArrowRight":
     				if (list) list.$set({ hoverItemIndex: -1 });
     				if (!isMulti || filterText.length > 0 || activeSelectedValue === undefined) return;
     				if (activeSelectedValue === selectedValue.length - 1) {
-    					$$invalidate(20, activeSelectedValue = undefined);
+    					$$invalidate(21, activeSelectedValue = undefined);
     				} else if (activeSelectedValue < selectedValue.length - 1) {
-    					$$invalidate(20, activeSelectedValue += 1);
+    					$$invalidate(21, activeSelectedValue += 1);
     				}
     				break;
     		}
@@ -3367,14 +3373,14 @@
 
     	function removeList() {
     		resetFilter();
-    		$$invalidate(20, activeSelectedValue = undefined);
+    		$$invalidate(21, activeSelectedValue = undefined);
     		if (!list) return;
     		list.$destroy();
-    		$$invalidate(32, list = undefined);
+    		$$invalidate(33, list = undefined);
     		if (!target) return;
     		if (target.parentNode) target.parentNode.removeChild(target);
     		target = undefined;
-    		$$invalidate(32, list);
+    		$$invalidate(33, list);
     		target = target;
     	}
 
@@ -3387,20 +3393,20 @@
 
     		if (container.contains(eventTarget)) return;
     		$$invalidate(2, isFocused = false);
-    		$$invalidate(31, listOpen = false);
-    		$$invalidate(20, activeSelectedValue = undefined);
+    		$$invalidate(32, listOpen = false);
+    		$$invalidate(21, activeSelectedValue = undefined);
     		if (input) input.blur();
     	}
 
     	function handleClick() {
     		if (isDisabled) return;
     		$$invalidate(2, isFocused = true);
-    		$$invalidate(31, listOpen = !listOpen);
+    		$$invalidate(32, listOpen = !listOpen);
     	}
 
     	function handleClear() {
     		$$invalidate(3, selectedValue = undefined);
-    		$$invalidate(31, listOpen = false);
+    		$$invalidate(32, listOpen = false);
     		dispatch("clear", selectedValue);
     		handleFocus();
     	}
@@ -3435,10 +3441,10 @@
     			visibility: "hidden"
     		});
 
-    		$$invalidate(32, list);
+    		$$invalidate(33, list);
     		target = target;
     		if (container) container.appendChild(target);
-    		$$invalidate(32, list = new List({ target, props: data }));
+    		$$invalidate(33, list = new List({ target, props: data }));
 
     		list.$on("itemSelected", event => {
     			const { detail } = event;
@@ -3454,11 +3460,11 @@
     					}
 
     					resetFilter();
-    					($$invalidate(3, selectedValue), $$invalidate(43, optionIdentifier));
+    					($$invalidate(3, selectedValue), $$invalidate(44, optionIdentifier));
 
     					setTimeout(() => {
-    						$$invalidate(31, listOpen = false);
-    						$$invalidate(20, activeSelectedValue = undefined);
+    						$$invalidate(32, listOpen = false);
+    						$$invalidate(21, activeSelectedValue = undefined);
     					});
     				}
     			}
@@ -3475,16 +3481,16 @@
     			}
 
     			$$invalidate(4, filterText = "");
-    			$$invalidate(31, listOpen = false);
-    			$$invalidate(20, activeSelectedValue = undefined);
+    			$$invalidate(32, listOpen = false);
+    			$$invalidate(21, activeSelectedValue = undefined);
     			resetFilter();
     		});
 
     		list.$on("closeList", () => {
-    			$$invalidate(31, listOpen = false);
+    			$$invalidate(32, listOpen = false);
     		});
 
-    		($$invalidate(32, list), target = target);
+    		($$invalidate(33, list), target = target);
     		getPosition();
     	}
 
@@ -3493,7 +3499,7 @@
     		if (listOpen) loadList();
 
     		if (items && items.length > 0) {
-    			$$invalidate(56, originalItemsClone = JSON.stringify(items));
+    			$$invalidate(57, originalItemsClone = JSON.stringify(items));
     		}
 
     		if (selectedValue) {
@@ -3544,48 +3550,49 @@
     	$$self.$set = $$props => {
     		if ("container" in $$props) $$invalidate(0, container = $$props.container);
     		if ("input" in $$props) $$invalidate(1, input = $$props.input);
-    		if ("Item" in $$props) $$invalidate(34, Item$$1 = $$props.Item);
+    		if ("Item" in $$props) $$invalidate(35, Item$$1 = $$props.Item);
     		if ("Selection" in $$props) $$invalidate(6, Selection$$1 = $$props.Selection);
     		if ("MultiSelection" in $$props) $$invalidate(7, MultiSelection$$1 = $$props.MultiSelection);
     		if ("isMulti" in $$props) $$invalidate(8, isMulti = $$props.isMulti);
     		if ("isDisabled" in $$props) $$invalidate(9, isDisabled = $$props.isDisabled);
-    		if ("isCreatable" in $$props) $$invalidate(35, isCreatable = $$props.isCreatable);
+    		if ("isCreatable" in $$props) $$invalidate(36, isCreatable = $$props.isCreatable);
     		if ("isFocused" in $$props) $$invalidate(2, isFocused = $$props.isFocused);
+    		if ("Id" in $$props) $$invalidate(10, Id = $$props.Id);
     		if ("selectedValue" in $$props) $$invalidate(3, selectedValue = $$props.selectedValue);
     		if ("filterText" in $$props) $$invalidate(4, filterText = $$props.filterText);
-    		if ("placeholder" in $$props) $$invalidate(36, placeholder = $$props.placeholder);
-    		if ("items" in $$props) $$invalidate(30, items = $$props.items);
-    		if ("itemFilter" in $$props) $$invalidate(37, itemFilter = $$props.itemFilter);
-    		if ("groupBy" in $$props) $$invalidate(38, groupBy = $$props.groupBy);
-    		if ("groupFilter" in $$props) $$invalidate(39, groupFilter = $$props.groupFilter);
-    		if ("isGroupHeaderSelectable" in $$props) $$invalidate(40, isGroupHeaderSelectable = $$props.isGroupHeaderSelectable);
-    		if ("getGroupHeaderLabel" in $$props) $$invalidate(41, getGroupHeaderLabel = $$props.getGroupHeaderLabel);
-    		if ("getOptionLabel" in $$props) $$invalidate(42, getOptionLabel = $$props.getOptionLabel);
-    		if ("optionIdentifier" in $$props) $$invalidate(43, optionIdentifier = $$props.optionIdentifier);
-    		if ("loadOptions" in $$props) $$invalidate(44, loadOptions = $$props.loadOptions);
-    		if ("hasError" in $$props) $$invalidate(10, hasError = $$props.hasError);
-    		if ("containerStyles" in $$props) $$invalidate(11, containerStyles = $$props.containerStyles);
-    		if ("getSelectionLabel" in $$props) $$invalidate(12, getSelectionLabel = $$props.getSelectionLabel);
-    		if ("createGroupHeaderItem" in $$props) $$invalidate(45, createGroupHeaderItem = $$props.createGroupHeaderItem);
-    		if ("createItem" in $$props) $$invalidate(46, createItem = $$props.createItem);
-    		if ("isSearchable" in $$props) $$invalidate(13, isSearchable = $$props.isSearchable);
-    		if ("inputStyles" in $$props) $$invalidate(14, inputStyles = $$props.inputStyles);
-    		if ("isClearable" in $$props) $$invalidate(15, isClearable = $$props.isClearable);
+    		if ("placeholder" in $$props) $$invalidate(37, placeholder = $$props.placeholder);
+    		if ("items" in $$props) $$invalidate(31, items = $$props.items);
+    		if ("itemFilter" in $$props) $$invalidate(38, itemFilter = $$props.itemFilter);
+    		if ("groupBy" in $$props) $$invalidate(39, groupBy = $$props.groupBy);
+    		if ("groupFilter" in $$props) $$invalidate(40, groupFilter = $$props.groupFilter);
+    		if ("isGroupHeaderSelectable" in $$props) $$invalidate(41, isGroupHeaderSelectable = $$props.isGroupHeaderSelectable);
+    		if ("getGroupHeaderLabel" in $$props) $$invalidate(42, getGroupHeaderLabel = $$props.getGroupHeaderLabel);
+    		if ("getOptionLabel" in $$props) $$invalidate(43, getOptionLabel = $$props.getOptionLabel);
+    		if ("optionIdentifier" in $$props) $$invalidate(44, optionIdentifier = $$props.optionIdentifier);
+    		if ("loadOptions" in $$props) $$invalidate(45, loadOptions = $$props.loadOptions);
+    		if ("hasError" in $$props) $$invalidate(11, hasError = $$props.hasError);
+    		if ("containerStyles" in $$props) $$invalidate(12, containerStyles = $$props.containerStyles);
+    		if ("getSelectionLabel" in $$props) $$invalidate(13, getSelectionLabel = $$props.getSelectionLabel);
+    		if ("createGroupHeaderItem" in $$props) $$invalidate(46, createGroupHeaderItem = $$props.createGroupHeaderItem);
+    		if ("createItem" in $$props) $$invalidate(47, createItem = $$props.createItem);
+    		if ("isSearchable" in $$props) $$invalidate(14, isSearchable = $$props.isSearchable);
+    		if ("inputStyles" in $$props) $$invalidate(15, inputStyles = $$props.inputStyles);
+    		if ("isClearable" in $$props) $$invalidate(16, isClearable = $$props.isClearable);
     		if ("isWaiting" in $$props) $$invalidate(5, isWaiting = $$props.isWaiting);
-    		if ("listPlacement" in $$props) $$invalidate(47, listPlacement = $$props.listPlacement);
-    		if ("listOpen" in $$props) $$invalidate(31, listOpen = $$props.listOpen);
-    		if ("list" in $$props) $$invalidate(32, list = $$props.list);
-    		if ("isVirtualList" in $$props) $$invalidate(48, isVirtualList = $$props.isVirtualList);
-    		if ("loadOptionsInterval" in $$props) $$invalidate(49, loadOptionsInterval = $$props.loadOptionsInterval);
-    		if ("noOptionsMessage" in $$props) $$invalidate(50, noOptionsMessage = $$props.noOptionsMessage);
-    		if ("hideEmptyState" in $$props) $$invalidate(51, hideEmptyState = $$props.hideEmptyState);
-    		if ("filteredItems" in $$props) $$invalidate(33, filteredItems = $$props.filteredItems);
-    		if ("inputAttributes" in $$props) $$invalidate(52, inputAttributes = $$props.inputAttributes);
-    		if ("listAutoWidth" in $$props) $$invalidate(53, listAutoWidth = $$props.listAutoWidth);
-    		if ("itemHeight" in $$props) $$invalidate(54, itemHeight = $$props.itemHeight);
-    		if ("Icon" in $$props) $$invalidate(16, Icon = $$props.Icon);
-    		if ("showChevron" in $$props) $$invalidate(17, showChevron = $$props.showChevron);
-    		if ("containerClasses" in $$props) $$invalidate(18, containerClasses = $$props.containerClasses);
+    		if ("listPlacement" in $$props) $$invalidate(48, listPlacement = $$props.listPlacement);
+    		if ("listOpen" in $$props) $$invalidate(32, listOpen = $$props.listOpen);
+    		if ("list" in $$props) $$invalidate(33, list = $$props.list);
+    		if ("isVirtualList" in $$props) $$invalidate(49, isVirtualList = $$props.isVirtualList);
+    		if ("loadOptionsInterval" in $$props) $$invalidate(50, loadOptionsInterval = $$props.loadOptionsInterval);
+    		if ("noOptionsMessage" in $$props) $$invalidate(51, noOptionsMessage = $$props.noOptionsMessage);
+    		if ("hideEmptyState" in $$props) $$invalidate(52, hideEmptyState = $$props.hideEmptyState);
+    		if ("filteredItems" in $$props) $$invalidate(34, filteredItems = $$props.filteredItems);
+    		if ("inputAttributes" in $$props) $$invalidate(53, inputAttributes = $$props.inputAttributes);
+    		if ("listAutoWidth" in $$props) $$invalidate(54, listAutoWidth = $$props.listAutoWidth);
+    		if ("itemHeight" in $$props) $$invalidate(55, itemHeight = $$props.itemHeight);
+    		if ("Icon" in $$props) $$invalidate(17, Icon = $$props.Icon);
+    		if ("showChevron" in $$props) $$invalidate(18, showChevron = $$props.showChevron);
+    		if ("containerClasses" in $$props) $$invalidate(19, containerClasses = $$props.containerClasses);
     	};
 
     	let disabled;
@@ -3597,7 +3604,7 @@
     			$: disabled = isDisabled;
     		}
 
-    		if ($$self.$$.dirty[0] & /*selectedValue*/ 8 | $$self.$$.dirty[1] & /*optionIdentifier*/ 4096) {
+    		if ($$self.$$.dirty[0] & /*selectedValue*/ 8 | $$self.$$.dirty[1] & /*optionIdentifier*/ 8192) {
     			$: {
     				if (typeof selectedValue === "string") {
     					$$invalidate(3, selectedValue = {
@@ -3609,28 +3616,28 @@
     		}
 
     		if ($$self.$$.dirty[0] & /*selectedValue, filterText*/ 24) {
-    			$: $$invalidate(22, showSelectedItem = selectedValue && filterText.length === 0);
+    			$: $$invalidate(23, showSelectedItem = selectedValue && filterText.length === 0);
     		}
 
-    		if ($$self.$$.dirty[0] & /*selectedValue*/ 8 | $$self.$$.dirty[1] & /*placeholder*/ 32) {
-    			$: $$invalidate(23, placeholderText = selectedValue ? "" : placeholder);
+    		if ($$self.$$.dirty[0] & /*selectedValue*/ 8 | $$self.$$.dirty[1] & /*placeholder*/ 64) {
+    			$: $$invalidate(24, placeholderText = selectedValue ? "" : placeholder);
     		}
 
-    		if ($$self.$$.dirty[0] & /*isSearchable*/ 8192 | $$self.$$.dirty[1] & /*inputAttributes*/ 2097152) {
+    		if ($$self.$$.dirty[0] & /*isSearchable*/ 16384 | $$self.$$.dirty[1] & /*inputAttributes*/ 4194304) {
     			$: {
-    				$$invalidate(21, _inputAttributes = Object.assign(inputAttributes, {
+    				$$invalidate(22, _inputAttributes = Object.assign(inputAttributes, {
     					autocomplete: "off",
     					autocorrect: "off",
     					spellcheck: false
     				}));
 
     				if (!isSearchable) {
-    					$$invalidate(21, _inputAttributes.readonly = true, _inputAttributes);
+    					$$invalidate(22, _inputAttributes.readonly = true, _inputAttributes);
     				}
     			}
     		}
 
-    		if ($$self.$$.dirty[0] & /*items, filterText, isMulti, selectedValue*/ 1073742104 | $$self.$$.dirty[1] & /*loadOptions, originalItemsClone, optionIdentifier, itemFilter, getOptionLabel, groupBy, createGroupHeaderItem, isGroupHeaderSelectable, groupFilter*/ 33586112) {
+    		if ($$self.$$.dirty[0] & /*filterText, isMulti, selectedValue*/ 280 | $$self.$$.dirty[1] & /*items, loadOptions, originalItemsClone, optionIdentifier, itemFilter, getOptionLabel, groupBy, createGroupHeaderItem, isGroupHeaderSelectable, groupFilter*/ 67172225) {
     			$: {
     				let _filteredItems;
     				let _items = items;
@@ -3691,9 +3698,9 @@
     						sortedGroupedItems.push(...groups[groupValue]);
     					});
 
-    					$$invalidate(33, filteredItems = sortedGroupedItems);
+    					$$invalidate(34, filteredItems = sortedGroupedItems);
     				} else {
-    					$$invalidate(33, filteredItems = _filteredItems);
+    					$$invalidate(34, filteredItems = _filteredItems);
     				}
     			}
     		}
@@ -3710,6 +3717,7 @@
     		MultiSelection$$1,
     		isMulti,
     		isDisabled,
+    		Id,
     		hasError,
     		containerStyles,
     		getSelectionLabel,
@@ -3794,56 +3802,57 @@
     			{
     				container: 0,
     				input: 1,
-    				Item: 34,
+    				Item: 35,
     				Selection: 6,
     				MultiSelection: 7,
     				isMulti: 8,
     				isDisabled: 9,
-    				isCreatable: 35,
+    				isCreatable: 36,
     				isFocused: 2,
+    				Id: 10,
     				selectedValue: 3,
     				filterText: 4,
-    				placeholder: 36,
-    				items: 30,
-    				itemFilter: 37,
-    				groupBy: 38,
-    				groupFilter: 39,
-    				isGroupHeaderSelectable: 40,
-    				getGroupHeaderLabel: 41,
-    				getOptionLabel: 42,
-    				optionIdentifier: 43,
-    				loadOptions: 44,
-    				hasError: 10,
-    				containerStyles: 11,
-    				getSelectionLabel: 12,
-    				createGroupHeaderItem: 45,
-    				createItem: 46,
-    				isSearchable: 13,
-    				inputStyles: 14,
-    				isClearable: 15,
+    				placeholder: 37,
+    				items: 31,
+    				itemFilter: 38,
+    				groupBy: 39,
+    				groupFilter: 40,
+    				isGroupHeaderSelectable: 41,
+    				getGroupHeaderLabel: 42,
+    				getOptionLabel: 43,
+    				optionIdentifier: 44,
+    				loadOptions: 45,
+    				hasError: 11,
+    				containerStyles: 12,
+    				getSelectionLabel: 13,
+    				createGroupHeaderItem: 46,
+    				createItem: 47,
+    				isSearchable: 14,
+    				inputStyles: 15,
+    				isClearable: 16,
     				isWaiting: 5,
-    				listPlacement: 47,
-    				listOpen: 31,
-    				list: 32,
-    				isVirtualList: 48,
-    				loadOptionsInterval: 49,
-    				noOptionsMessage: 50,
-    				hideEmptyState: 51,
-    				filteredItems: 33,
-    				inputAttributes: 52,
-    				listAutoWidth: 53,
-    				itemHeight: 54,
-    				Icon: 16,
-    				showChevron: 17,
-    				containerClasses: 18,
-    				handleClear: 19
+    				listPlacement: 48,
+    				listOpen: 32,
+    				list: 33,
+    				isVirtualList: 49,
+    				loadOptionsInterval: 50,
+    				noOptionsMessage: 51,
+    				hideEmptyState: 52,
+    				filteredItems: 34,
+    				inputAttributes: 53,
+    				listAutoWidth: 54,
+    				itemHeight: 55,
+    				Icon: 17,
+    				showChevron: 18,
+    				containerClasses: 19,
+    				handleClear: 20
     			},
     			[-1, -1, -1]
     		);
     	}
 
     	get handleClear() {
-    		return this.$$.ctx[19];
+    		return this.$$.ctx[20];
     	}
     }
 

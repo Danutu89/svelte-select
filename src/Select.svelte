@@ -23,6 +23,7 @@
   export let isDisabled = false;
   export let isCreatable = false;
   export let isFocused = false;
+  export let Id = undefined;
   export let selectedValue = undefined;
   export let filterText = "";
   export let placeholder = "Select...";
@@ -780,6 +781,7 @@
   class:multiSelect={isMulti}
   class:disabled={isDisabled}
   class:focused={isFocused}
+  id={Id}
   style={containerStyles}
   on:click={handleClick}
   bind:this={container}>
