@@ -781,7 +781,7 @@
   class:multiSelect={isMulti}
   class:disabled={isDisabled}
   class:focused={isFocused}
-  id={Id}
+  id="{Id}"
   style={containerStyles}
   on:click={handleClick}
   bind:this={container}>
